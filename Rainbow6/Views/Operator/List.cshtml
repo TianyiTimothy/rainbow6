@@ -1,0 +1,36 @@
+﻿@model List<Rainbow6.Models.Operator>
+@{
+    ViewBag.Title = "List";
+    ViewBag.CSS = "listOperator.css";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Operators</h2>
+<a href="/Operator/List/0">
+    List All
+</a> |
+<a href="/Operator/List/1">
+    Attackers
+    @*<input id="att" type="radio" name="position" value="Attacker" />
+        <label for="att">Attacker</label>*@
+</a> |
+<a href="/Operator/List/2">
+    Defenders
+    @*<input id="def" type="radio" name="position" value="Defender" />
+        <label for="def">Defender</label>*@
+</a>
+
+<input id="search" type="text" name="search" />
+<input id="searchButton" type="button" value="Search" />
+
+<a href="/Operator/Add">
+    Add
+</a>
+<ul class="operators">
+    @foreach (var Operator in Model)
+    {
+        <a href="~/Operator/details/@Operator.OperatorID">
+            <li class="operator" style="background-image: url('../../@Operator.ImageUrl')"><img src="../../@Operator.UniqueAbilityImageUrl">@Operator.Alias</li>
+        </a>
+    }
+</ul>

@@ -1,0 +1,33 @@
+﻿ul.operators{
+    padding: 50px;
+    list-style: none;
+    width: 100%;
+    min-height: 400px;
+}
+
+.operator
+{
+    width: 150px;
+    height: 200px;
+    float: left;
+    margin-right: 100px;
+    color: white;
+    font-size: 1.3em;
+    text-align: center;
+    line-height: 260px;
+    background-size: 100%;
+    background-position: center top;
+    border-radius: 5px;
+    border: #999 solid 3px;
+}
+.operator img{
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 60%;
+    left: calc(50% - 25px);
+}
+.operator:hover{
+    cursor: pointer;
+}

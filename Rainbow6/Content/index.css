@@ -1,0 +1,88 @@
+﻿/* index */
+/* hide the navigation bar */
+#body {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+}
+
+.navbar {
+    display: none;
+}
+
+#index {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #ddd;
+}
+
+#left {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    border: 1px solid black;
+    background-color: #FFC0CB;
+    width: 50%;
+    height: 100%;
+    float: left;
+    background: url("image/index_background_attackers.jpg");
+    background-size: 100%;
+    transition: 1s;
+}
+
+    #left:hover,
+    #right:hover {
+        background-color: #FFB0BB;
+        background-position: center center;
+        background-size: 150%;
+    }
+
+    #right #defenders,
+    #left #attackers {
+        display: block;
+        position: fixed;
+        right: 55%;
+        top: calc(25% - 50px);
+        width: 120px;
+        height: 120px;
+        border: 1px solid black;
+        background: url("image/R6Satk.png") no-repeat center 25%;
+        background-color: #000;
+        line-height: 180px;
+        font-size: 1.3em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        color: white;
+        border-radius: 10px;
+    }
+
+        #right #defenders:hover,
+        #left #attackers:hover {
+            background-color: #333;
+        }
+
+#right {
+    display: block;
+    border: 1px solid black;
+    background-color: #6495FF;
+    width: 50%;
+    height: 100%;
+    margin-left: 50%;
+    background: url("image/index_background_defenders.jpg");
+    background-size: 100%;
+    transition: 1s;
+}
+
+    #right #defenders {
+        left: 55%;
+        background: url("image/R6Sdef.png") no-repeat center 25%;
+        background-color: #000;
+    }

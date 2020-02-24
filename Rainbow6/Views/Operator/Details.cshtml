@@ -1,0 +1,29 @@
+﻿@model Rainbow6.Models.ViewModels.ShowOperator
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Operator.Name - A.K.A @Model.Operator.Alias</h2>
+
+<img src="~/@Model.Operator.ImageUrl" style="float: left;" />
+<h3> Biography </h3>
+<p>@Model.Operator.Biography</p>
+<h3> Unique Ability </h3>
+<p>@Model.Operator.UniqueAbilityDescription</p>
+
+<a href="/Operator/Delete/@Model.Operator.OperatorID">
+    Delete
+</a>
+
+<h3> Weapons </h3>
+<ul>
+
+    @foreach (var weapon in Model.Weapons)
+    {
+        <a href="~/Weapon/Details/@weapon.WeaponID">
+            <li>@weapon.Name</li>
+        </a>
+    }
+
+</ul>

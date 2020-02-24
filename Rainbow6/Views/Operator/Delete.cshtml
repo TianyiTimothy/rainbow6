@@ -1,0 +1,168 @@
+﻿@model Rainbow6.Models.Operator
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Operator</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Alias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthMonth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthMonth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthPlace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthPlace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Biography)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Biography)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UniqueAbility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniqueAbility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UniqueAbilityDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniqueAbilityDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UniqueAbilityImageUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniqueAbilityImageUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BackgroundImageUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BackgroundImageUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LogoImageUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LogoImageUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EliteImageUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EliteImageUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PositionID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PositionID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

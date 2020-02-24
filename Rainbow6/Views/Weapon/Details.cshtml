@@ -1,0 +1,26 @@
+﻿@model Rainbow6.Models.ViewModels.ShowWeapon
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Weapon.Name - @Model.Weapon.Type</h2>
+
+    <img src="~/@Model.Weapon.ImageUrl" style="float: left;" />
+    <h3> Description </h3>
+    <p>@Model.Weapon.Description</p>
+    <p>@Model.Weapon.IngameDescription</p>
+    <h3> Fire Mode </h3>
+    <p>@Model.Weapon.FireMode</p>
+
+    <h3> Operators </h3>
+    <ul>
+
+        @foreach (var o in Model.Operators)
+        {
+            <a href="~/Operator/Details/@o.OperatorID">
+                <li>@o.Name ( @o.Alias )</li>
+            </a>
+        }
+
+    </ul>
